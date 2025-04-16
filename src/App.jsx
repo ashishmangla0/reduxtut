@@ -6,6 +6,10 @@ import {
   incremetByAmount,
   reset,
 } from "./features/counter/counterSlice";
+import HomePage from "./pages/HomePage";
+import { Route, Routes } from "react-router-dom";
+import AboutPage from "./pages/AboutPage";
+import Header from "./components/Header";
 
 function App() {
   const count = useSelector((state) => state?.counter?.value);
@@ -30,7 +34,15 @@ function App() {
 
   return (
     <>
-      <div>
+   <Header/>
+     <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      {/* <Route path="/contact" element={<ContactPage />} />
+      <Route path="*" element={<NotFoundPage />} />  */}
+    </Routes>
+    
+      {/* <div>
         {count}
         <button onClick={handleIncrement}>+</button>
         <button onClick={handleDecrement} disabled={count <= 0}>
@@ -38,7 +50,7 @@ function App() {
         </button>
         <button onClick={handleReset}>reset</button>
         <button onClick={handleIncrementByAmount}>5</button>
-      </div>
+      </div> */}
     </>
   );
 }
