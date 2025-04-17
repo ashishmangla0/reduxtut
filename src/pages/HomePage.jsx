@@ -32,7 +32,7 @@ const HomePage = () => {
 
         <div className="">
           <button onClick={handleIncrement}>+</button>
-          <button onClick={handleDecrement}>-</button>
+          <button onClick={handleDecrement} disabled={count <= 0}>-</button>
           <button onClick={handleReset}>Reset</button>
           <button onClick={handleIncrementByAmount}>5</button>
         </div>

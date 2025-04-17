@@ -7,8 +7,8 @@ return(
       <NavLink to="/" className={'header_link'}>
         Counter
       </NavLink>
-      <NavLink to="/about" className={'header_link'}>
-        About
+      <NavLink to="/cake-icecream" className={'header_link'}>
+        Cake and Icecream
       </NavLink>
       {/* <NavLink to="/concerts">All Concerts</NavLink>
       <NavLink to="/account">Account</NavLink> */}
